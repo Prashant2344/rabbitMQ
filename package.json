@@ -1,0 +1,25 @@
+{
+  "name": "rabbitmq",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:producer": "node directExchangeProducer.js",
+    "start:consumer": "node directExchangeConsumer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prashant2344/rabbitMQ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prashant2344/rabbitMQ/issues"
+  },
+  "homepage": "https://github.com/Prashant2344/rabbitMQ#readme",
+  "description": "",
+  "dependencies": {
+    "amqplib": "^0.10.9"
+  }
+}
