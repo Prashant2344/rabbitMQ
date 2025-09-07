@@ -6,12 +6,13 @@ async function sendMail() {
         const channel = await connection.createChannel();
 
         const exchange = 'direct_exchange';
-
-        const routingKey = 'send_mail';
-        const routingKey2 = 'send_sms';
+        const exchangeType = 'direct';
 
         const queue = 'mail_queue';
         const queue2 = 'sms_queue';
+
+        const routingKey = 'send_mail';
+        const routingKey2 = 'send_sms';
 
         const mail = {
             to: 'silpakaprashant@gmail.com',
@@ -26,7 +27,7 @@ async function sendMail() {
             message: 'This is a test SMS'
         }
 
-        await channel.assertExchange(exchange, 'direct', { durable: false });
+        await channel.assertExchange(exchange, exchangeType, { durable: false });
 
         await channel.assertQueue(queue, { durable: false });
         await channel.assertQueue(queue2, { durable: false });
