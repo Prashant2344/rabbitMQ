@@ -15,8 +15,8 @@ async function sendMail() {
         const routingKey2 = 'send_sms';
 
         const mail = {
-            to: 'silpakaprashant@gmail.com',
-            from: 'prashant@gmail.com',
+            to: 'updatesilpakaprashant@gmail.com',
+            from: 'updateprashant@gmail.com',
             subject: 'Test Email',
             text: 'This is a test email'
         }
